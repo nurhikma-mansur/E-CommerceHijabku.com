@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:wght@100;300;400&family=Roboto:wght@100;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#daftar{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/hero.jpg);
+    background-size: 100% 100%;
+}
+
+#daftar .hijab{
+    font-weight: 600;
+}
+
+#daftar nav{
+    background-color: #446A46;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-weight: 300;
+}
+
+#daftar nav h1 a{
+    font-weight:400;
+    font-size: 25px;
+}
+
+#daftar nav a{
+    color: white;
+}
+
+#daftar .nav-1 a:nth-child(2){
+    margin: 0 30px;
+}
+
+#daftar .nav-2 a:nth-child(2){
+    margin-left: 20px;
+}
+
+#daftar .nav-2{
+    font-size: 25px;
+}
+
+#daftar .form-daftar{
+    color: white;
+    margin: 100px;
+    font-family: Inter;
+    width: 40%;
+    background-color: rgb(0,0,0,0.4);
+    backdrop-filter: blur;
+    box-sizing: border-box;
+    padding: 50px;
+    position: absolute;
+    right: -50px;
+    bottom: -30px;
+}
+
+#daftar .form-daftar h2{
+    margin-bottom: 20px;
+}
+
+#daftar .form-daftar .item{
+    margin-bottom: 20px;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+#daftar .form-daftar .user{
+    margin-left: 40px;
+}
+
+#daftar .form-daftar .user p{
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+#daftar .form-daftar .user input{
+    margin-bottom: 15px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: none;
+}
+
+#daftar .form-daftar .button{
+    display: flex;
+}
+
+#daftar .form-daftar .button button{
+    background-color: #446A46;
+    box-sizing: border-box;
+    padding: 2px 20px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+#daftar .form-daftar .button p{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 15px;
+    background-color: transparent;
+    font-size: 13px;
+}
+
+#daftar .form-daftar .button a{
+    color: #446A46;
+    font-weight: 600;
+}
