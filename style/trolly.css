@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:wght@100;300;400&family=Roboto:wght@100;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto';
+}
+
+#trolly .hijab{
+    font-weight: 600;
+}
+
+#trolly nav{
+    background-color: #F4F5F6;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px #9e9898;
+    font-family: Roboto;
+}
+
+#trolly nav h1{
+    font-weight:200;
+    font-size: 25px;
+}
+
+#trolly nav a{
+    color: #446a46;
+}
+
+#trolly .nav-1 a:nth-child(2){
+    margin: 0 30px;
+}
+
+#trolly .nav-2 a:nth-child(2){
+    margin-left: 20px;
+}
+
+#trolly .nav-2{
+    font-size: 25px;
+}
+
+#trolly .trolly-item{
+    height: 91vh;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+#trolly .item-1 {
+    position: relative;
+}
+
+#trolly .item-1 .wrapper {
+    position: absolute;
+    top: 8%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+}
+
+#trolly .item-1 .wrapper p.cart > i {
+    margin-right: 15px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+#trolly .item-1 p.cart {
+    font-size: 24px;
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+
+#trolly .item-1 p.detail {
+    margin: 20px 0;
+    width: 100%;
+    background-color: #446a46;
+    color: white;
+    padding: 12px 30px;
+    font-size: 21px;
+    font-family: 'Roboto';
+}
+
+#trolly .item-1 label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#trolly .item-1 input {
+    padding: 10px 20px;
+    border: none;
+    background-color: #F4F5F6;
+}
+
+#trolly .item-1 .nama {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#trolly .item-1 .nama .input-group {
+    width: 45%;
+}
+
+#trolly .item-1 .nama .input-group input {
+    width: 100%;
+}
+
+#trolly .item-1 .input-group-alamat {
+    margin-top: 15px;
+    width: 100%;
+}
+
+#trolly .item-1 .input-group-alamat input {
+    width: 100%;
+}
+
+#trolly .item-1 .input-group-transaksi {
+    margin-top: 15px;
+    width: 100%;
+}
+
+#trolly .item-1 .input-group-transaksi input {
+    width: 50%;
+}
+
+#trolly .item-1 .input-group-transaksi button {
+    margin-left: 20px;
+    background-color: #446a46;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+}
+
+#trolly .item-2 {
+    background-color: rgb(224, 224, 224);
+    position: relative;
+}
+
+#trolly .item-2 p.heading-title {
+    color: #446a46;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+#trolly .item-2 .wrapper {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    left: 5%;
+}
+
+#trolly .item-2 hr {
+    margin: 15px 0;
+    width: 100%;
+    height: .5px;
+    background-color: rgba(0, 0, 0, .13);
+}
+
+#trolly .item-2 .wrapper .item {
+    display: flex;
+}
+
+#trolly .item-2 .wrapper .item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+#trolly .item-2 .wrapper .item .item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#trolly .item-2 .wrapper .item .item-text .item-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#trolly .item-2 .wrapper .item .item-text .item-quantity {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(163, 163, 163);
+}
+
+#trolly .item-2 .total {
+    display: flex;
+    justify-content: space-between;
+}
+
+#trolly .item-2 .total p {
+    font-size: 21px;
+    font-weight: 600;
+}

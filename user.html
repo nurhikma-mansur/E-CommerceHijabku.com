@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar</title>
+    <title>User</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./style/daftar.css">
+    <link rel="stylesheet" href="./style/user.css">
 </head>
 <body>
-    <!-- Daftar -->
-    <div id="daftar">
+    <!-- User -->
+    <div id="user">
         <nav>
             <h1 class="hijab"><a href="#home">Hijabku.com</a></h1>
             <div class="nav-1">
@@ -23,27 +23,31 @@
                 <a href="#keranjang"><i class="bi bi-cart" margin="5px"></i></a>
             </div>
         </nav>
-        <div class="form-daftar">
-            <form action="index.html">
-                <h2>Daftar</h2>
+        <div class="user-item">
+            <div class="item-img">
+                <img src="img/bg.jpg" alt=""> <br>
+                <button>ubah foto</button>
+            </div>
 
-                <hr>
-                
-                <div class="user">
-                    <label for="nama">Nama</label>
+            <hr>
+            
+            <div class="item-input">
+                <div class="input-satu">
+                    <h3>Nama</h3>
                     <input type="text" name="nama">
-                    <label for="username">Username</label>
+                    <h3>Username</h3>
                     <input type="text" name="username">
-                    <label for="password">Password</label>
-                    <input type="text" name="password">
-                    <label for="password-transaksi">Password Transaksi</label>
+                    <h3>Password Transaksi</h3>
                     <input type="password" name="password-transaksi">
-                    <div class="button">
-                        <button type="submit">Daftar</button>
-                        <p>sudah punya akun? ayo <a href="#">Masuk</a></p>
-                    </div>
                 </div>
-            </form>
+                <div class="input-dua">
+                    <h3>Email</h3>
+                    <input type="text" name="nama">
+                    <h3>Password</h3>
+                    <input type="password" name="password"> <br>
+                    <button>ubah</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
