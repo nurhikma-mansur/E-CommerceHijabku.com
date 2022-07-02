@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: 'Roboto';
 }
 
 #user .hijab{
@@ -52,15 +53,14 @@
     width: 156px;
     height: 156px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
-#user .item-img button{
-    padding: 10px 15px;
-    border: 1px solid rgb(189, 185, 185);
+#user .item-img input{
+    /* padding: 10px 15px; */
     position: absolute;
-    left: 220px;
-    bottom: 310px;
-    font-size:20px;
+    bottom: 300px;
+    font-size:16px;
     border-radius: 5px;
 }
 
@@ -75,17 +75,24 @@
 }
 
 #user .item-input input{
+    width: 300px;
     border: none;
     background: #f4f5f6;
-    padding: 7px 100px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 10px;
+    margin-top: 10px;
     margin-bottom: 20px; 
 }
 
-#user .item-input h3{
-    margin-bottom: 10px;
-    font-family: Inter;
-    font-size: 20px;
-    font-weight:600;
+#user .item-input input:focus{
+    outline: none;
+}
+
+#user .item-input label{
+    font-size: 16px;
+    margin-bottom: 100px;
+    font-weight:500;
 }
 
 #user .input-dua{
@@ -94,7 +101,7 @@
 }
 
 #user .input-dua button{
-    padding: 6px 20px;
+    padding: 10px 20px;
     position: absolute;
     top: 200px;
     background-color: #446a46;

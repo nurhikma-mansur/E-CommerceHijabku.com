@@ -2,7 +2,6 @@
 
 
 #footer{
-    /* width: 100vw; */
     box-sizing: border-box;
     height: 227px;
     background-color: #446a46;
@@ -17,11 +16,13 @@
 #footer h1{
     font-family: Roboto;
     font-weight: 100;
-    margin: 30px;
+    margin: 50px 50px;
 }
 
 #footer .contact-us{
     font-size: 25px;
+    margin-top: 10px;
+    line-height: 30px;
 }
 #footer .owner-hijab{
     font-size: 25px;

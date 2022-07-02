@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:wght@100;300;400&family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
 *  {
     padding: 0;
     margin: 0;
@@ -10,23 +13,32 @@
 }
 
 #home nav{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-bottom: 3px;
     background-color: #f4f5f6;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 50px;
+    padding: 8px 50px;
     box-sizing: border-box;
-    font-family: Roboto;
-}
-
-#home nav h1{
-    font-weight:500;
-    font-size: 25px;
 }
 
 #home nav a{
     color: #446a46;
+    font-size: 16px;
+    font-weight:500;
+}
+
+#home nav a.title{
+    color: black;
+    font-size: 25px;
+    font-weight:500;
+}
+
+#home .nav-2 {
+    display: flex;
+    align-items: center;
 }
 
 #home .nav-1 a:nth-child(2){
@@ -35,6 +47,53 @@
 
 #home .nav-2 a:nth-child(2){
     margin-left: 20px;
+}
+
+#home .nav-2 .avatar-container {
+    position: relative;
+}
+
+#home .nav-2 .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+        
+}
+
+#home .nav-2 .avatar:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#home .nav-2 .drop-item {
+    display: none;
+    width: 150px;
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-40%);
+    background-color: white;
+    padding: 10px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+#home .nav-2 .drop-item.active {
+    display: block;
+}
+
+#home .nav-2 .drop-item a {
+    font-size: 16px;
+}
+
+#home .nav-2 .dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+#home .nav-2 .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .container {
@@ -56,7 +115,7 @@
 }
 
 .container .left-side .input-group {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .container .left-side label {
@@ -90,6 +149,7 @@
     grid-template-columns: repeat(4, 220px);
     gap: 25px;
     overflow-y: scroll;
+    padding-bottom: 150px;
 }
 
 .container .right-side .card {
@@ -102,7 +162,6 @@
 
 .container .right-side .card .wrapper {
     padding: 20px;
-    
 }
 
 .container .right-side img {

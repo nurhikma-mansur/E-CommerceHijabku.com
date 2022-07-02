@@ -10,7 +10,7 @@
 #home{
     background-image: url(../img/hero.jpg);
     background-size: 100% 100%;
-    width: 100vw;
+    /* width: 100vw; */
     height: 95vh;
     color: white;
     position: relative;

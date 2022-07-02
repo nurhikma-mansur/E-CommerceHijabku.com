@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
 }
 
 #daftar{
@@ -53,15 +54,14 @@
 #daftar .form-daftar{
     color: white;
     margin: 100px;
-    font-family: Inter;
     width: 40%;
     background-color: rgb(255,255,255,0.15);
     backdrop-filter: blur(1px);
     box-sizing: border-box;
-    padding: 50px;
+    padding: 30px 50px;
     position: absolute;
     right: -50px;
-    bottom: -30px;
+    bottom: -75px;
 }
 
 #daftar .form-daftar h2{
@@ -95,9 +95,14 @@
 
 #daftar .form-daftar .user input{
     margin-bottom: 15px;
-    font-size: 25px;
+    font-size: 16px;
     border-radius: 5px;
+    padding: 5px 15px;
     border: none;
+}
+
+#daftar .form-daftar .user input:focus{
+    outline: none;
 }
 
 #daftar .form-daftar .button{
@@ -111,7 +116,7 @@
     color: white;
     border: none;
     font-size: 15px;
-    font-weight: 100;
+    font-weight: 500;
     margin-top: 20px;
     border-radius: 6px;
 }
