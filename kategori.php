@@ -81,16 +81,16 @@
             </div>
             <div class="nav-2">
                 <div class="avatar-container">
-                    <img src="./img/bg.jpg" alt="" class="avatar">
+                    <img src="<?= $profile_picture ?>" alt="" class="avatar">
                     <div class="drop-item">
                         <ul class="dropdown-menu">
-                            <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="./profile.php" class="dropdown-item">profil</a></li>
+                            <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="./user.php" class="dropdown-item">profil</a></li>
                             <li style="display: <?= ($is_login) ? 'none' : 'block' ?>;"><a href="./login.php" class="dropdown-item">login</a></li>
-                            <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="../function/logout.php" class="dropdown-item" >logout</a></li>
+                            <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="./function/logout.php" class="dropdown-item" >logout</a></li>
                         </ul>
                     </div>
                 </div>
-                <a href="#keranjang"><i class="bi bi-cart" margin="5px"></i></a>
+                <a href="./keranjang.php"><i class="bi bi-cart" margin="5px"></i></a>
             </div>
         </nav>
     </div>
@@ -157,7 +157,7 @@
 
                 <div class="button-group">
                     <a href="./detail.php?id=<?= $item['id'] ?>" class="detail">detail</a>
-                    <a href="../function/add_item.php?id=<?= $item['id'] ?>" class="keranjang">
+                    <a href="./function/add_item.php?id=<?= $item['id'] ?>" class="keranjang">
                         <i class="bi bi-cart"></i>
                     </a>
                 </div>

@@ -192,7 +192,7 @@
             echo "
                 <script>
                     alert('password transaksi salah')
-                    window.location.href = '../pages/keranjang.php'
+                    window.location.href = '../keranjang.php'
                 </script>
             ";
         }

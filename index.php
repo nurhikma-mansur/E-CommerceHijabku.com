@@ -1,3 +1,18 @@
+<?php
+
+    session_start();
+
+    $is_login;
+
+    if(empty($_SESSION['user'])){
+        $is_login = false;
+    } else {
+        $profile_picture =  ( !is_null($_SESSION['user']['gambar'])) ? './assets/users/'. $_SESSION['user']['gambar'] : 'https://via.placeholder.com/140?text=tidak+ada+foto';
+        $is_login = true;
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,21 +31,30 @@
 
     <div id="home">
         <nav>
-            <h1><a href="#home">Hijabku.com</a></h1>
+            <h1><a href="./index.php" class="title">Hijabku.com</a></h1>
             <div class="nav-1">
-                <a href="#home">Home</a>
+                <a href="./index.php">Home</a>
                 <a href="./kategori.php?category=all-c&harga=all-p">Ketegori</a>
                 <a href="#registrasi">Registrasi</a>
             </div>
             <div class="nav-2">
-                <a href="#profile"><i class="bi bi-circle"></i></a>
-                <a href="#keranjang"><i class="bi bi-cart" margin="5px"></i></a>
+                <div class="avatar-container">
+                    <img src="<?= $profile_picture ?>" alt="" class="avatar">
+                    <div class="drop-item">
+                        <ul class="dropdown-menu">
+                            <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="./user.php" class="dropdown-item">profil</a></li>
+                            <li style="display: <?= ($is_login) ? 'none' : 'block' ?>;"><a href="./login.php" class="dropdown-item">login</a></li>
+                            <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="./function/logout.php" class="dropdown-item" >logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="./keranjang.php"><i class="bi bi-cart" margin="5px"></i></a>
             </div>
         </nav>
-        <div class="home-item">
-            <p>matahari tidak kehilangan keindahannya</p>
-            <span>karena ditutupi oleh sebuah awan</span>
-        </div>
+    </div>
+
+    <div class="hero">
+
     </div>
 
     <!-----------------CONTAINER------------------>
@@ -124,5 +148,13 @@
         </div>
     </div>
 
+    <script>
+
+        var avatar = document.querySelector('img.avatar')
+        var dropItem = document.querySelector('div.drop-item')
+
+        avatar.addEventListener('click', () => dropItem.classList.toggle('active'))
+
+    </script>
 </body>
 </html>

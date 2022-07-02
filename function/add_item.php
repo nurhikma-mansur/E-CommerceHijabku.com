@@ -8,16 +8,17 @@
         echo "
             <script>
                 alert('item dimasukan ke keranjang')
-                window.location.href = '../pages/hijab.php?category=all-c&harga=all-p
+                window.location.href = '../index.php
             </script>
         ";
     } else {
         echo "
             <script>
                 alert('item gagal dimasukan ke keranjang')
-                window.location.href = '../pages/hijab.php?category=all-c&harga=all-p
+                window.location.href = '../kategori.php?category=all-c&harga=all-p
             </script>
         ";
-    }
 
+    }  
+    
 ?>

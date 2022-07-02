@@ -17,7 +17,7 @@
 
     $msg = "<script>
                 alert('gagal checkout barang')
-                window.location.href = '../pages/keranjang.php
+                window.location.href = './keranjang.php
             </script>";
 
     if(addToPembelian($data, $_SESSION['user']['id']) <= 0)
@@ -48,7 +48,7 @@
     // $email->Body = $pesan;
 
     // ob_start();
-    //     require '../pages/email.php';
+    //     require '../email.php';
 
     //     $content = ob_get_contents();
 
@@ -65,18 +65,18 @@
     //     echo "
     //         <script>
     //             alert('berhasil')
-    //             window.location.href = '../pages/keranjang.php'
+    //             window.location.href = '../keranjang.php'
     //         </script>
     //     ";
     // }
-    
-    echo "
-        <script>
-            alert('berhasil')
-            window.location.href = '../pages/keranjang.php'
-        </script>
-    ";
 
+    echo "
+            <script>
+                alert('berhasil')
+                window.location.href = '../keranjang.php'
+            </script>
+        ";
+    
 
 
 ?>
