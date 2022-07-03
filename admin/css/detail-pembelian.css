@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Roboto:wght@100;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+nav {
+    background-color: #446a46;
+    padding: 20px 15px;
+    font-size: 21px;
+    color: #f4f5f6;
+    font-weight: 300;
+}
+
+.container {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.container .left-side {
+    background-color: #f4f5f6;
+    padding-top: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.container .left-side ul li {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.container .left-side ul li a {
+    text-decoration: none;
+    color: #446a46;
+    font-size: 18px;
+}
+
+.container .left-side ul li a > i {
+    margin-right: 10px;
+    font-size: 21px;
+}
+
+.container .right-side {
+    padding: 50px;
+}
+
+.container .wrapper {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    background-color: #f4f5f6;
+    padding: 30px;
+}
+
+.container .wrapper a.kembali {
+    color: #446a46;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.container .wrapper .top {
+    background-color: rgba(1, 105, 202, 0.2);
+    border: 1px solid rgba(1, 105, 202, 1);
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.container .wrapper .top b {
+    color: rgba(1, 105, 202, 1);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container .wrapper .top a > i {
+    font-size: 21px;
+}
+
+.container .wrapper table {
+    width: 100%;
+}
+
+.container .wrapper table thead tr th {
+    margin-top: 20px;
+    width: 7%;
+}
+
+.container .wrapper table thead th {
+    text-align: left;
+    padding: 10px;
+    color: rgb(145, 145, 145);
+}
+
+.container .wrapper table thead th:first-child {
+    margin-top: 20px;
+    width: 2%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.container .wrapper table thead th:nth-child(2) {
+    width: 20%;
+}
+
+.container .wrapper table tbody td {
+    padding: 15px 10px;
+}
+
+.container .wrapper table tbody tr:nth-child(odd) td {
+    background-color: rgb(216, 216, 216);
+}
+
+.container .wrapper table tbody td:first-child {
+    padding-left: 10px;
+}
+
+.container .wrapper table tbody tr:last-child td {
+    background-color: #446a46;
+    color: #f4f5f6;
+}

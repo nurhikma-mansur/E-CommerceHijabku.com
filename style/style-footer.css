@@ -9,6 +9,7 @@
     color: #ffffff;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-family: Roboto;
     font-weight: 100;
 }
@@ -22,7 +23,15 @@
 #footer .contact-us{
     font-size: 25px;
     margin-top: 10px;
-    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+#footer p:not(p.contact-us){
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .contact-us {
 }
 #footer .owner-hijab{
     font-size: 25px;

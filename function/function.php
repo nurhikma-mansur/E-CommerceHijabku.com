@@ -126,7 +126,7 @@
         $gambar_loc = $_FILES['gambar']['tmp_name'];
         $gambar = $data['produk'] . '-' . $_FILES['gambar']['name'] ?? null;
         $gambar = str_replace(" ", "-", $gambar);
-        move_uploaded_file($gambar_loc, '../assets/produk/' . $gambar);
+        move_uploaded_file($gambar_loc, '../assets/product/' . $gambar);
 
         $produk = $_POST['produk'];
         $harga = $_POST['harga'];
@@ -195,6 +195,7 @@
                     window.location.href = '../keranjang.php'
                 </script>
             ";
+            die;
         }
     }
 

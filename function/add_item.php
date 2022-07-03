@@ -8,17 +8,17 @@
         echo "
             <script>
                 alert('item dimasukan ke keranjang')
-                window.location.href = '../index.php
+                window.location.href = '../kategori.php?category=all-c&harga=all-p'
             </script>
         ";
     } else {
         echo "
             <script>
-                alert('item gagal dimasukan ke keranjang')
-                window.location.href = '../kategori.php?category=all-c&harga=all-p
+                alert('item gagal ke keranjang! silahkan login dulu')
+                window.location.href = '../kategori.php?category=all-c&harga=all-p'
             </script>
         ";
-
+        
     }  
     
 ?>

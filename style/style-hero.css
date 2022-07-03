@@ -54,7 +54,10 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-        
+}
+
+#home .nav-2 a > i {
+    font-size: 21px;
 }
 
 #home .nav-2 .avatar:hover {

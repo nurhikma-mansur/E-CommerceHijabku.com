@@ -20,7 +20,7 @@
 
     $_SESSION['keranjang'] = $data;
 
-    $profile_picture =  ( !is_null($_SESSION['user']['gambar'])) ? '../assets/users/'. $_SESSION['user']['gambar'] : 'https://via.placeholder.com/140?text=tidak+ada+foto';
+    $profile_picture =  ( !is_null($_SESSION['user']['gambar'])) ? './assets/users/'. $_SESSION['user']['gambar'] : 'https://via.placeholder.com/140?text=tidak+ada+foto';
 
     if(isset($_GET['id']) && isset($_GET['produkId'])){
 
@@ -42,6 +42,7 @@
     <title>Trolly</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style/trolly.css">
+    <link rel="icon" href="./img/bg.jpg" >
 </head>
 <body>
     <!-- Trolly -->
@@ -53,7 +54,7 @@
             <div class="nav-1">
                 <a href="./index.php">Home</a>
                 <a href="./kategori.php?category=all-c&harga=all-p">Ketegori</a>
-                <a href="#registrasi">Registrasi</a>
+                <a href="./daftar.php">Registrasi</a>
             </div>
             <div class="nav-2">
                 <div class="avatar-container">

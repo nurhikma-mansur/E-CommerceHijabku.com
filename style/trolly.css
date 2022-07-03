@@ -96,6 +96,10 @@
     object-fit: cover;
 }
 
+#trolly #home .nav-2 a > i {
+    font-size: 21px;
+}
+
 #trolly .trolly-item{
     height: 91vh;
     display: grid;

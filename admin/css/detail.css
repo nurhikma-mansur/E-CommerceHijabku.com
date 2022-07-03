@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Roboto:wght@100;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+nav {
+    background-color: #446a46;
+    padding: 20px 15px;
+    font-size: 21px;
+    color: #f4f5f6;
+    font-weight: 300;
+}
+
+.container {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.container .left-side {
+    background-color: #f4f5f6;
+    padding-top: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.container .left-side ul li {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.container .left-side ul li a {
+    text-decoration: none;
+    color: #446a46;
+    font-size: 18px;
+}
+
+.container .left-side ul li a > i {
+    margin-right: 10px;
+    font-size: 21px;
+}
+
+.container .right-side {
+    padding: 30px;
+}
+
+.container .right-side .wrapper {
+    width: 50%;
+}
+
+.container .right-side .wrapper form {
+    width: 100%;
+}
+
+.container .right-side .wrapper img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.container .right-side form input.file-input {
+    display: block;
+    margin-top: 10px;
+}
+
+.container .right-side form p.text {
+    margin: 30px 0;
+    font-size: 21px;
+    color: #446a46;
+    font-weight: 600;
+}
+
+.container .right-side form .input-group {
+    margin-top: 20px;
+}
+
+.container .right-side form .input-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container .right-side form .input-group input {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    padding: 8px 15px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.container .right-side form .input-group textarea {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    padding: 8px 15px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.container .right-side form .input-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .right-side form .input-column .input-group {
+    margin-top: 20px;
+    width: 43%;
+}
+
+
+.container .right-side form .input-group input:focus {
+    outline: none;
+}
+
+.container .right-side form a.hapus {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    background-color: rgb(146, 15, 15);
+    margin-bottom: 10px;
+    color: #f4f5f6;
+}
+
+.container .right-side form button.ubah {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #446a46;
+    border: none;
+    color: #f4f5f6;
+    font-size: 16px;
+}

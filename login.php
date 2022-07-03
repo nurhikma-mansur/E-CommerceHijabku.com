@@ -64,13 +64,9 @@
         <nav>
             <h1 class="hijab"><a href="#home">Hijabku.com</a></h1>
             <div class="nav-1">
-                <a href="#home">Home</a>
-                <a href="#kategori">Ketegori</a>
-                <a href="#registrasi">Registrasi</a>
-            </div>
-            <div class="nav-2">
-                <a href="#profile"><i class="bi bi-circle"></i></a>
-                <a href="#keranjang"><i class="bi bi-cart" margin="5px"></i></a>
+                <a href="./index.php">Home</a>
+                <a href="../kategori.php?category=all-c&harga=all-p">Kategori</a>
+                <a href="./daftar.php">Registrasi</a>
             </div>
         </nav>
         <div class="form-login">
@@ -87,7 +83,7 @@
                     <input type="password" name="password">
                     <div class="button">
                         <button type="submit" name="login">masuk</button>
-                        <p>belum punya akun? ayo <a href="#">Daftar</a></p>
+                        <p>belum punya akun? ayo <a href="./daftar.php">Daftar</a></p>
                     </div>
                 </div>
             </form> 

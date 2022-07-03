@@ -10,7 +10,7 @@
         $is_login = false;
     } else {
         $is_login = true;
-        $profile_picture =  ( !is_null($_SESSION['user']['gambar'])) ? '../assets/users/'. $_SESSION['user']['gambar'] : 'https://via.placeholder.com/140?text=tidak+ada+foto';
+        $profile_picture =  ( !is_null($_SESSION['user']['gambar'])) ? './assets/users/'. $_SESSION['user']['gambar'] : null;
     }
 
 
@@ -67,6 +67,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style/kategori.css">
+    <link rel="icon" href="./img/bg.jpg" >
     <title>Hijab</title>
 </head>
 <body>
@@ -76,12 +77,12 @@
             <h1><a href="./index.php" class="title">Hijabku.com</a></h1>
             <div class="nav-1">
                 <a href="./index.php">Home</a>
-                <a href="./kategori.php?category=all-c&harga=all-p">Ketegori</a>
+                <a href="./kategori.php?category=all-c&harga=all-p">Kategori</a>
                 <a href="#registrasi">Registrasi</a>
             </div>
             <div class="nav-2">
                 <div class="avatar-container">
-                    <img src="<?= $profile_picture ?>" alt="" class="avatar">
+                    <img src="<?= $profile_picture ?? 'https://via.placeholder.com/140?text=tidak+ada+foto' ?>" alt="" class="avatar">
                     <div class="drop-item">
                         <ul class="dropdown-menu">
                             <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="./user.php" class="dropdown-item">profil</a></li>
@@ -104,38 +105,38 @@
             <form action="">
                 <div class="input-group">
                     <input class="radio" id="all-c" name="category" type="radio" value="all-c" >
-                    <label class="radio" for="all-c">semua</label>
+                    <label class="radio" for="all-c" id="all-c">semua</label>
                 </div>
                 <div class="input-group">
                     <input class="radio" id="pasminah" name="category" type="radio" value="pasminah"  >
-                    <label class="radio" for="pasminah">pasminah</label>
+                    <label class="radio" for="pasminah" id="pasminah">pasminah</label>
                 </div>
                 <div class="input-group">
                     <input class="radio" id="rabbani" name="category" type="radio" value="rabbani" >
-                    <label class="radio" for="rabbani">rabbani</label>
+                    <label class="radio" for="rabbani" id="rabbani" >rabbani</label>
                 </div>
                 <div class="input-group">
                     <input class="radio" id="bego" name="category" type="radio" value="bego" >
-                    <label class="radio" for="bego">bego'</label>
+                    <label class="radio" for="bego" id="bego">bego'</label>
                 </div>
                 
                 <hr>
 
                 <div class="input-group">
                     <input class="form-check-input me-2 radio" id="all-p" name="harga" type="radio" value="all-p" >
-                    <label class="radio" for="all-p">semua harga</label>
+                    <label class="radio" for="all-p" id="all-p">semua harga</label>
                 </div>
                 <div class="input-group">
                     <input class="form-check-input me-2 radio" id="under-50" name="harga" type="radio" value="under-50" >
-                    <label class="radio" for="under-50">0 < 50,000</label>
+                    <label class="radio" for="under-50" id="under-50">0 < 50,000</label>
                 </div>
                 <div class="input-group">
                     <input class="form-check-input me-2 radio" id="under-100" name="harga" type="radio" value="under-100" >
-                    <label class="radio" for="under-100">< 100,000</label>
+                    <label class="radio" for="under-100" id="under-100">< 100,000</label>
                 </div>
                 <div class="input-group">
                     <input class="form-check-input me-2 radio" id="above-100" name="harga" type="radio" value="above-100" >
-                    <label class="radio" for="above-100">>100,000</label>
+                    <label class="radio" for="above-100" id="above-100"> >100,000</label>
                 </div>
 
                 <button type="submit">terapkan filter</button>
@@ -150,9 +151,10 @@
             <div class="card">
 
                 <div class="wrapper">
-                    <img src="./img/bg.jpg  " alt="">
+                    <img src="./assets/product/<?= $item['gambar'] ?>" alt="">
                     <p class="item-name"><?= $item['produk'] ?></p>
-                    <p class="price">Rp <?= number_format($item['harga']) ?>,00</p>
+                    <p class="kategori"><?= $item['kategori'] ?></p>
+                    <p class="price">Rp <?= number_format($item['harga']) ?></p>
                 </div>
 
                 <div class="button-group">
@@ -174,10 +176,19 @@
 
         var category = '<?php echo $_GET['category'] ?>'                        
         var price = '<?php echo $_GET['harga'] ?>'                        
+
         var c = document.querySelector(`input#${category}`)
         var p = document.querySelector(`input#${price}`)
+        var cLabel = document.querySelector(`label#${category}`)
+        var pLabel = document.querySelector(`label#${price}`)
         c.setAttribute('checked', 'checked')
         p.setAttribute('checked', 'checked')
+        cLabel.style.color = '#446a46'
+        cLabel.style.fontWeight = '600'
+        pLabel.style.color = '#446a46'
+        pLabel.style.fontWeight = '600'
+
+        console.log(pLabel)
         
     </script>
     <script>

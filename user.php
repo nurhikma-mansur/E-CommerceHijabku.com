@@ -5,9 +5,17 @@
     if(empty($_SESSION['user']))
         header('Location: ./hijab.php?category=all-c&harga=all-p');
     
-    $user = $_SESSION['user'];
 
-    $profile_picture =  ( !is_null($user['gambar'])) ? './assets/users/'. $user['gambar'] : 'https://via.placeholder.com/140?text=tidak+ada+foto';
+
+    if(empty($_SESSION['user'])){
+        $is_login = false;
+    } else {
+        $profile_picture =  ( !is_null($_SESSION['user']['gambar'])) ? './assets/users/'. $_SESSION['user']['gambar'] : null;
+        $is_login = true;
+        $user = $_SESSION['user'];
+    }
+
+
 
 ?>
 
@@ -21,22 +29,34 @@
     <title>User</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style/user.css">
+    <link rel="icon" href="./img/bg.jpg" >
 </head>
 <body>
     <!-- User -->
     <div id="user">
-        <nav>
-            <h1 class="hijab"><a href="#home">Hijabku.com</a></h1>
-            <div class="nav-1">
-                <a href="#home">Home</a>
-                <a href="#kategori">Ketegori</a>
-                <a href="#registrasi">Registrasi</a>
-            </div>
-            <div class="nav-2">
-                <a href="#profile"><i class="bi bi-circle"></i></a>
-                <a href="#keranjang"><i class="bi bi-cart" margin="5px"></i></a>
-            </div>
-        </nav>
+        <div id="home">
+            <nav>
+                <h1><a href="./index.php" class="title">Hijabku.com</a></h1>
+                <div class="nav-1">
+                    <a href="./index.php">Home</a>
+                    <a href="./kategori.php?category=all-c&harga=all-p">Ketegori</a>
+                    <a href="./">Registrasi</a>
+                </div>
+                <div class="nav-2">
+                    <div class="avatar-container">
+                        <img src="<?= $profile_picture ?? 'https://via.placeholder.com/140?text=tidak+ada+foto' ?>" alt="" class="avatar">
+                        <div class="drop-item">
+                            <ul class="dropdown-menu">
+                                <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="./user.php" class="dropdown-item">profil</a></li>
+                                <li style="display: <?= ($is_login) ? 'none' : 'block' ?>;"><a href="./login.php" class="dropdown-item">login</a></li>
+                                <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="./function/logout.php" class="dropdown-item" >logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="./keranjang.php"><i class="bi bi-cart" margin="5px"></i></a>
+                </div>
+            </nav>
+        </div>
         <form action="./function/update_profile.php" method="post" enctype="multipart/form-data  ">
 
             <input type="hidden" name="id" value="<?= $user['id'] ?>">
@@ -69,5 +89,14 @@
             </div>
         </form>
     </div>
+
+    <script>
+
+        var avatar = document.querySelector('img.avatar')
+        var dropItem = document.querySelector('div.drop-item')
+
+        avatar.addEventListener('click', () => dropItem.classList.toggle('active'))
+
+    </script>
 </body>
 </html>

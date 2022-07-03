@@ -7,41 +7,93 @@
     font-family: 'Roboto';
 }
 
-#user .hijab{
-    font-weight: 600;
-}
-
-#user nav{
-    background-color: #F4F5F6;
-    font-size: 15px;
+#user #home nav{
+    font-family: 'Roboto';
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-bottom: 3px;
+    background-color: #f4f5f6;
+    font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 8px 50px;
     box-sizing: border-box;
-    box-shadow: 0 2px 4px #9e9898;
-    font-family: Roboto;
 }
 
-#user nav h1{
-    font-weight:200;
-    font-size: 25px;
-}
-
-#user nav a{
+#user #home nav a{
     color: #446a46;
+    font-size: 16px;
+    font-weight:500;
 }
 
-#user .nav-1 a:nth-child(2){
+#user #home nav a.title{
+    color: black;
+    font-size: 25px;
+    font-weight:500;
+}
+
+#user #home .nav-2 {
+    display: flex;
+    align-items: center;
+}
+
+#user #home .nav-1 a:nth-child(2){
     margin: 0 30px;
 }
 
-#user .nav-2 a:nth-child(2){
+#user #home .nav-2 a:nth-child(2){
     margin-left: 20px;
 }
 
-#user .nav-2{
-    font-size: 25px;
+#user #home .nav-2 a > i{
+    font-size: 21px;
+}
+
+#user #home .nav-2 .avatar-container {
+    position: relative;
+}
+
+#user #home .nav-2 .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#user #home .nav-2 .avatar:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#user #home .nav-2 .drop-item {
+    display: none;
+    width: 150px;
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-40%);
+    background-color: white;
+    padding: 10px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+#user #home .nav-2 .drop-item.active {
+    display: block;
+}
+
+#user #home .nav-2 .drop-item a {
+    font-size: 16px;
+}
+
+#user #home .nav-2 .dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+#user #home .nav-2 .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
 }
 
 #user .user-item{

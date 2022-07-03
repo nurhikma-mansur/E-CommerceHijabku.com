@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Roboto:wght@100;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+nav {
+    background-color: #446a46;
+    padding: 20px 15px;
+    font-size: 21px;
+    color: #f4f5f6;
+    font-weight: 300;
+}
+
+.container {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.container .left-side {
+    background-color: #f4f5f6;
+    padding-top: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.container .left-side ul li {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.container .left-side ul li a {
+    text-decoration: none;
+    color: #446a46;
+    font-size: 18px;
+}
+
+.container .left-side ul li a > i {
+    margin-right: 10px;
+    font-size: 21px;
+}
+
+.container .right-side {
+    padding: 30px;
+}
+
+.container .right-side .wrapper {
+    margin-bottom: 30px;
+}
+
+.container .right-side .wrapper .top-section {
+    display: grid;
+    grid-template-columns: repeat(2, 47%);
+    justify-content: space-between;
+}
+
+.container .right-side .wrapper .top-section .jumlah-produk,
+.container .right-side .wrapper .top-section .jumlah-akun {
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    padding: 20px;
+    padding-bottom: 50px;
+    background-color: #f4f5f6;
+}
+
+.container .right-side .wrapper .top-section h4 {
+    margin-bottom: 10px;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.container .right-side .wrapper .top-section p.jumlah {
+    margin: 13px 0 ;
+    font-size: 18px;
+}
+
+.container .right-side .wrapper .top-section p.small {
+    margin: 13px 0 ;
+    font-size: 16px;
+    color: #b3b3b3;
+}
+
+.container .right-side .wrapper .daftar-produk {
+    padding: 20px 30px;
+    margin-top: 30px;
+    background-color: #f4f5f6;
+}
+.container .right-side .wrapper .daftar-produk .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .right-side .wrapper .daftar-produk .title p.daftar {
+    font-size: 24px;
+    color: #446a46;
+    font-weight: 400;
+}
+
+.container .right-side .wrapper .daftar-produk .title .form-group select {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    padding: 8px 13px;
+    border: none;
+    color: #446a46;
+    font-size: 16px;
+}
+
+.container .right-side .wrapper .daftar-produk .title .form-group button {
+    background-color: #446a46;
+    border: none;
+    padding: 10px 13px;
+    color: #f4f5f6;
+    border-radius: 3px;
+    margin: 0 10px;
+}
+
+.container .right-side .wrapper .daftar-produk .title .form-group a {
+    border-radius: 3px;
+    color: #f4f5f6;
+    padding: 11px 13px;
+    background-color: #446a46;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.container .right-side .wrapper .daftar-produk table {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.container .right-side .wrapper .daftar-produk table {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.container .right-side .wrapper .daftar-produk table tr.header td {
+    color: rgb(138, 138, 138);
+    padding-bottom: 20px;
+    border-bottom: 2px solid gainsboro;
+}
+
+.container .right-side .wrapper .daftar-produk table .produk-title {
+    display: flex;
+    align-items: center;
+}
+
+.container .right-side .wrapper .daftar-produk table .img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.container .right-side .wrapper .daftar-produk table tr.item td {
+    padding: 15px 0;
+    border-bottom: 1px solid gainsboro;
+}
+
+.container .right-side .wrapper .daftar-produk table .produk-title .title-group p.produk {
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.container .right-side .wrapper .daftar-produk table .produk-title .title-group p.kategori {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(158, 158, 158);
+}
+
+.container .right-side .wrapper .daftar-produk table tr.item td a.detail {
+    background-color: #446a46;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #f4f5f6;
+    font-weight: 300;
+    border-radius: 5px;
+}

@@ -1,15 +1,18 @@
 <?php
 
     session_start();
+    require './function/function.php';
 
     $is_login;
 
     if(empty($_SESSION['user'])){
         $is_login = false;
     } else {
-        $profile_picture =  ( !is_null($_SESSION['user']['gambar'])) ? './assets/users/'. $_SESSION['user']['gambar'] : 'https://via.placeholder.com/140?text=tidak+ada+foto';
+        $profile_picture =  ( !is_null($_SESSION['user']['gambar'])) ? './assets/users/'. $_SESSION['user']['gambar'] : null;
         $is_login = true;
     }
+
+    $data = query("SELECT * FROM kategori JOIN hijab ON hijab.id_kategori = kategori.id LIMIT 9");
 
 
 ?>
@@ -24,6 +27,7 @@
     <link rel="stylesheet" href="style/style-hero.css">
     <link rel="stylesheet" href="style/style-container.css">
     <link rel="stylesheet" href="style/style-footer.css">
+    <link rel="icon" href="./img/bg.jpg">
 </head>
 <body>
 
@@ -34,12 +38,12 @@
             <h1><a href="./index.php" class="title">Hijabku.com</a></h1>
             <div class="nav-1">
                 <a href="./index.php">Home</a>
-                <a href="./kategori.php?category=all-c&harga=all-p">Ketegori</a>
-                <a href="#registrasi">Registrasi</a>
+                <a href="./kategori.php?category=all-c&harga=all-p">Kategori</a>
+                <a href="./daftar.php">Registrasi</a>
             </div>
             <div class="nav-2">
                 <div class="avatar-container">
-                    <img src="<?= $profile_picture ?>" alt="" class="avatar">
+                    <img src="<?= $profile_picture ?? 'https://via.placeholder.com/140?text=tidak+ada+foto' ?>" alt="" class="avatar">
                     <div class="drop-item">
                         <ul class="dropdown-menu">
                             <li style="display: <?= ($is_login) ? 'block' : 'none' ?>;" ><a href="./user.php" class="dropdown-item">profil</a></li>
@@ -59,78 +63,29 @@
 
     <!-----------------CONTAINER------------------>
     <div id="container">
-        <div class="card">
-            <img src="./img/bg.jpg" alt="">
-            <div class="card-content">
-                <p>Hijab Cantik By Hikma</p>
-                <p>Bella Square</p>
-                <h5>Rp 50.000</h5>
-                <button><p>detail</p></button><i class="bi bi-cart"></i>
+
+        <?php foreach($data as $item): ?>
+
+            <div class="card">
+
+                <div class="wrapper">
+                    <img src="./assets/product/<?= $item['gambar'] ?>" alt="">
+                    <p class="item-name"><?= $item['produk'] ?></p>
+                    <p class="kategori"><?= $item['kategori'] ?></p>
+                    <p class="price">Rp <?= number_format($item['harga']) ?></p>
+                </div>
+
+                <div class="button-group">
+                    <a href="./detail.php?id=<?= $item['id'] ?>" class="detail">detail</a>
+                    <a href="./function/add_item.php?id=<?= $item['id'] ?>" class="keranjang">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                </div>
+
             </div>
-        </div>
-        <div class="card">
-            <img src="./img/bg.jpg" alt="">
-            <div class="card-content">
-                <p>Hijab Cantik By Hikma</p>
-                <p>Bella Square</p>
-                <h5>Rp 50.000</h5>
-                <button>detail</button><i class="bi bi-cart"></i>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./img/bg.jpg" alt="">
-            <div class="card-content">
-                <p>Hijab Cantik By Hikma</p>
-                <p>Bella Square</p>
-                <h5>Rp 50.000</h5>
-                <button>detail</button><i class="bi bi-cart"></i>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./img/bg.jpg" alt="">
-            <div class="card-content">
-                <p>Hijab Cantik By Hikma</p>
-                <p>Bella Square</p>
-                <h5>Rp 50.000</h5>
-                <button>detail</button><i class="bi bi-cart"></i>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./img/bg.jpg" alt="">
-            <div class="card-content">
-                <p>Hijab Cantik By Hikma</p>
-                <p>Bella Square</p>
-                <h5>Rp 50.000</h5>
-                <button>detail</button><i class="bi bi-cart"></i>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./img/bg.jpg" alt="">
-            <div class="card-content">
-                <p>Hijab Cantik By Hikma</p>
-                <p>Bella Square</p>
-                <h5>Rp 50.000</h5>
-                <button>detail</button><i class="bi bi-cart"></i>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./img/bg.jpg" alt="">
-            <div class="card-content">
-                <p>Hijab Cantik By Hikma</p>
-                <p>Bella Square</p>
-                <h5>Rp 50.000</h5>
-                <button>detail</button><i class="bi bi-cart"></i>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./img/bg.jpg" alt="">
-            <div class="card-content">
-                <p>Hijab Cantik By Hikma</p>
-                <p>Bella Square</p>
-                <h5>Rp 50.000</h5>
-                <button>detail</button><i class="bi bi-cart"></i>
-            </div>
-        </div>
+
+        <?php endforeach ?>
+
     </div>
 
     <!----------------FOOTER---------------------->

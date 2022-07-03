@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Roboto:wght@100;300;400&display=swap');
+
+body {
+    background-image: url(../../img/hero.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    right: 37%;
+    left: 37%;
+    /* background-color: red; */
+    text-align: center;
+}
+
+.container h3 {
+    color: #f4f5f6;
+    font-size: 31px;
+    font-weight: 300;
+}
+
+.container input {
+    color: #f4f5f6c7;
+    margin: 20px auto;
+    display: block;
+    width: 90%;
+    border: none;
+    font-size: 16px;
+    padding: 16px 15px;
+    border-radius: 25px;
+    background-color: rgba(70, 70, 70, 0.404);
+}
+
+.container input:focus {
+    outline: none;
+}
+
+.container button {
+    margin: 25px auto;
+    display: block;
+    width: 97%;
+    border: none;
+    font-size: 21px;
+    padding: 13px 15px;
+    font-weight: 100;
+    border-radius: 25px;
+    background-color: #446a46;
+    color: #f4f5f6;
+}
+
+.container ::placeholder {
+    font-size: 16px;
+    color: #f4f5f6c7;
+}
