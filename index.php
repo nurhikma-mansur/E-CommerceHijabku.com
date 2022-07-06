@@ -12,7 +12,7 @@
         $is_login = true;
     }
 
-    $data = query("SELECT * FROM kategori JOIN hijab ON hijab.id_kategori = kategori.id LIMIT 9");
+    $data = query("SELECT * FROM kategori JOIN hijab ON hijab.id_kategori = kategori.id LIMIT 8");
 
 
 ?>
@@ -22,12 +22,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hijabku</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style/style-hero.css">
     <link rel="stylesheet" href="style/style-container.css">
     <link rel="stylesheet" href="style/style-footer.css">
     <link rel="icon" href="./img/bg.jpg">
+    <title>Hijabku</title>
 </head>
 <body>
 

@@ -27,6 +27,10 @@
         $data = query("SELECT * FROM kategori JOIN hijab ON hijab.id_kategori = kategori.id");
     }
 
+    $akun = query("SELECT * FROM user");
+
+    
+
 
 ?>
 
@@ -65,13 +69,13 @@
                 <div class="top-section">
                     <div class="jumlah-produk">
                         <h4>Jumlah produk</h4>
-                        <p class="jumlah">7</p>
+                        <p class="jumlah"><?= count($data) ?></p>
                         <p class="small">jumlah item</p>
                     </div>
         
                     <div class="jumlah-akun">
                         <h4>Jumlah akun terdaftar</h4>
-                        <p class="jumlah">7</p>
+                        <p class="jumlah"><?= count($akun) ?></p>
                         <p class="small">jumlah pengguna</p>
                     </div>
                 </div>
