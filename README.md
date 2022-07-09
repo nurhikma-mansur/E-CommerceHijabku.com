@@ -3,7 +3,7 @@
 <h1 align="center">Hi 👋, Saya Nurhikma</h1>
 <h3 align="center">Saya tertarik pada di Front End developer</h3>
 
-- 🔭 Final Project WEB 2 [hijabku.com](hijabku.infinityfreeapp.com)
+- 🔭 Final Project WEB 2 [hijabku.infinityfreeapp.com](hijabku.infinityfreeapp.com)
 
 - 📫 hubungi saya di **nuhikmamansur113@gmail.com**
 
